@@ -52,6 +52,12 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.tools:desugar_jdk_libs:2.0.4'
+        }
+    }
 }
 
 dependencies {
